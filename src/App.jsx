@@ -9,8 +9,8 @@ function App() {
     <>
       <div className="relative w-full">
         <Header />
-        {/* <Home /> */}
-        <CardDetail />
+        <Home />
+        {/* <CardDetail /> */}
         <Footer />
       </div>
     </>
