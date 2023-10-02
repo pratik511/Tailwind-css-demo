@@ -1,18 +1,13 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import CardDetail from "./component/Common/CardDetail";
-import Footer from "./component/footer";
-import Header from "./component/header";
-import Home from "./component/home";
+import router from "./routes";
 
 function App() {
   return (
     <>
-      <div className="relative w-full">
-        <Header />
-        <Home />
-        {/* <CardDetail /> */}
-        <Footer />
-      </div>
+      {/* <div className="relative w-full"> */}
+        <RouterProvider router={router} />
+      {/* </div> */}
     </>
   );
 }

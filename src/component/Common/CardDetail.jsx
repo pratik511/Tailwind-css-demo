@@ -1,12 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 const CardDetail = () => {
+  const navigate = useNavigate();
   return (
-    <div className="container mx-auto mt-8 p-4">
+    <div className="container mx-auto p-4">
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2">
           <img
             src="https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png"
             alt="Product"
             className="w-full h-auto rounded-lg shadow-lg"
+            onClick={() => navigate("/")}
           />
         </div>
         <div className="w-full md:w-1/2 p-4">

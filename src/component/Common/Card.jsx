@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 const Card = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="container mx-auto">
-        <div className="bg-white rounded-lg overflow-hidden shadow-md">
+        <div className="bg-white rounded-lg overflow-hidden shadow-md" onClick={() => navigate("/product")}>
           <img
             src={`https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png`}
             alt="Product"
