@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
     <section
-      className="bg-cover bg-center h-screen relative"
+      className="bg-cover bg-center h-[70vh] h-screen relative"
       style={{
         backgroundImage: `url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png)`, // Replace with your image URL
         backgroundSize: "cover", // Maintain aspect ratio and cover the entire container
