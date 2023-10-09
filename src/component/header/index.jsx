@@ -1,9 +1,11 @@
 // src/components/Header.js
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const openMenu = () => {
     console.log("Opening menu");
@@ -52,22 +54,25 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <a
-            href="#"
-            className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold"
+            onClick={() => navigate("/")}
+            className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold cursor-pointer"
           >
             Logo
           </a>
           <nav className="hidden sm:flex space-x-4">
-            <a href="#" className="text-white  md:text-lg">
+            <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
               Home
             </a>
-            <a href="#" className="text-white  md:text-lg">
+            <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
               About
             </a>
-            <a href="#" className="text-white  md:text-lg">
+            <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
               Services
             </a>
-            <a href="#" className="text-white  md:text-lg">
+            <a
+              onClick={() => navigate("/contactus")}
+              className="text-white cursor-pointer md:text-lg"
+            >
               Contact
             </a>
           </nav>
@@ -99,16 +104,28 @@ const Header = () => {
 
                 {/* <!-- Mobile Menu Links --> */}
                 <nav className="pt-8 mx-5 space-y-4">
-                  <a href="#" className="block text-2xl font-semibold">
+                  <a
+                    onClick={() => navigate("/")}
+                    className="block text-2xl font-semibold"
+                  >
                     Home
                   </a>
-                  <a href="#" className="block text-2xl font-semibold">
+                  <a
+                    onClick={() => navigate("/")}
+                    className="block text-2xl font-semibold"
+                  >
                     About
                   </a>
-                  <a href="#" className="block text-2xl font-semibold">
+                  <a
+                    onClick={() => navigate("/")}
+                    className="block text-2xl font-semibold"
+                  >
                     Services
                   </a>
-                  <a href="#" className="block text-2xl font-semibold">
+                  <a
+                    onClick={() => navigate("/contactus")}
+                    className="block text-2xl font-semibold"
+                  >
                     Contact
                   </a>
                 </nav>
