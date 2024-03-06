@@ -3,10 +3,11 @@ import "./App.css";
 import router from "./routes";
 
 function App() {
+
   return (
     <>
       {/* <div className="relative w-full"> */}
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
       {/* </div> */}
     </>
   );

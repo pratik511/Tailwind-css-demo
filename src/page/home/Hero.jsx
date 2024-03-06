@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
     <section
-      className="bg-cover bg-center h-[70vh] h-screen relative"
+      className="bg-cover bg-center h-[70vh] max-h-[80vh] relative"
       style={{
         backgroundImage: `url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png)`, // Replace with your image URL
         backgroundSize: "cover", // Maintain aspect ratio and cover the entire container
@@ -11,16 +11,16 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="container mx-auto h-full flex flex-col items-center justify-center text-center relative z-10">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-4">
+      <div className="container relative z-10 flex flex-col items-center justify-center h-full mx-auto text-center">
+        <h1 className="mb-4 text-4xl font-semibold text-white sm:text-5xl md:text-6xl">
           Discover the Latest Trends
         </h1>
-        <p className="text-xl text-white mb-8">
+        <p className="mb-8 text-xl text-white">
           Shop our exclusive collection now
         </p>
         <a
           href="#shop"
-          className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 rounded-full text-lg md:text-xl font-semibold transition duration-300"
+          className="px-8 py-4 text-lg font-semibold text-white transition duration-300 bg-yellow-500 rounded-full hover:bg-yellow-600 md:text-xl"
         >
           Shop Now
         </a>

@@ -2,60 +2,29 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { OverFlowScroll } from "../../hooks/scrollHook";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const openMenu = () => {
-    console.log("Opening menu");
     setIsMenuOpen(true);
+    OverFlowScroll(true)
   };
 
   // Function to close the mobile menu
   const closeMenu = () => {
-    console.log("Closing menu");
     setIsMenuOpen(false);
+    OverFlowScroll(false)
   };
   return (
-    // <header className="bg-gradient-to-r from-blue-500 via-fuchsia-400 to-purple-700 text-white p-4 sticky top-0">
-    //   <div className="container mx-auto flex justify-between">
-    //     <h1 className="text-3xl self-center font-semibold cursor-pointer">
-    //       Your Website Name
-    //     </h1>
-    //     <nav className="m-3">
-    //       <ul className="flex space-x-2 h-8">
-    //         <li className="text-white h-7 self-center hover:bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-xl text-white">
-    //           <a href="#" className="m-7">
-    //             Home
-    //           </a>
-    //         </li>
-    //         <li className="text-white h-7 self-center hover:bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-xl text-white">
-    //           <a href="#" className="m-7">
-    //             About
-    //           </a>
-    //         </li>
-    //         <li className="text-white h-7 self-center hover:bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-xl text-white">
-    //           <a href="#" className="m-7">
-    //             Service
-    //           </a>
-    //         </li>
-    //         <li className="text-white h-7 self-center hover:bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-xl text-white">
-    //           <a href="#" className="m-7">
-    //           Contact
-    //           </a>
-    //         </li>
-    //       </ul>
-    //     </nav>
-    //     <button className="h-10 self-center bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-xl text-white px-5">Save Changes</button>
-    //   </div>
-    // </header>
-    <header className="bg-blue-500 p-4 fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-500 via-fuchsia-400 to-purple-700 text-white p-4 sticky top-0">
+    <header className="sticky top-0 left-0 right-0 z-50 p-4 text-white bg-blue-500 bg-gradient-to-r from-blue-500 via-fuchsia-400 to-purple-700">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* <!-- Mobile Menu Toggle Button --> */}
           <button
-            className="block sm:hidden text-white"
+            className="block text-white sm:hidden"
             onClick={() => openMenu()}
           >
             <svg
@@ -63,7 +32,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="h-6 w-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -76,11 +45,11 @@ const Header = () => {
 
           <a
             onClick={() => navigate("/")}
-            className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold cursor-pointer"
+            className="text-2xl font-semibold text-white cursor-pointer sm:text-3xl md:text-4xl"
           >
             Logo
           </a>
-          <nav className="hidden sm:flex space-x-4">
+          <nav className="hidden space-x-4 sm:flex">
             <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
               Home
             </a>
@@ -100,11 +69,11 @@ const Header = () => {
 
           {/* <!-- Mobile Menu Container --> */}
           {isMenuOpen && (
-            <div className="fixed inset-0 z-50 w-full h-full bg-gray-800 bg-opacity-90 overflow-y-auto">
-              <div className="w-64 h-screen bg-white transform translate-x-0 transition-transform ease-in-out duration-300">
+            <div className="fixed inset-0 z-50 w-full h-full overflow-y-auto bg-gray-800 bg-opacity-90">
+              <div className="w-64 h-screen transition-transform duration-300 ease-in-out transform translate-x-0 bg-white">
                 {/* <!-- Close Button --> */}
                 <button
-                  className="text-gray-600 mt-4 mr-4 absolute top-0 right-0"
+                  className="absolute top-0 right-0 mt-4 mr-4 text-gray-600"
                   onClick={() => closeMenu()}
                 >
                   <svg
@@ -112,7 +81,7 @@ const Header = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="h-6 w-6"
+                    className="w-6 h-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -127,25 +96,25 @@ const Header = () => {
                 <nav className="pt-8 mx-5 space-y-4">
                   <a
                     onClick={() => navigate("/")}
-                    className="block text-2xl font-semibold"
+                    className="block text-lg font-semibold text-black"
                   >
                     Home
                   </a>
                   <a
                     onClick={() => navigate("/")}
-                    className="block text-2xl font-semibold"
+                    className="block text-lg font-semibold text-black"
                   >
                     About
                   </a>
                   <a
                     onClick={() => navigate("/")}
-                    className="block text-2xl font-semibold"
+                    className="block text-lg font-semibold text-black"
                   >
                     Services
                   </a>
                   <a
                     onClick={() => navigate("/contactus")}
-                    className="block text-2xl font-semibold"
+                    className="block text-lg font-semibold text-black"
                   >
                     Contact
                   </a>
@@ -155,10 +124,10 @@ const Header = () => {
           )}
 
           <button
-            className="block sm:hidden text-white"
+            className="block sm:hidden"
             onClick={() => openMenu()}
           >
-           
+            Cart
           </button>
         </div>
       </div>

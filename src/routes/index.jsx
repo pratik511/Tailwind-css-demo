@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import DefaultLayout from "../component/defaultLayout/defaultLayout";
-import Home from "./home";
 import CardDetail from "../component/Common/CardDetail";
-import Contact from "./contact";
+import Home from "../page/home/index"
+import Contact from "../page/contact/index"
+import DefaultLayout from "./defaultLayout";
 
 const router = createBrowserRouter([
   {

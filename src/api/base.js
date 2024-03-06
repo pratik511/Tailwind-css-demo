@@ -8,11 +8,10 @@ const port = window.location.port;
 let isLocalApi = port >= 3000;
 
 const axiosApi = axios.create({
-  baseURL: `${
-    (hostname === "localhost"|| hostname === "127.0.0.1") && isLocalApi
-      ? BASE_URL?.endpoint
-      : LIVE_URL?.endpoint
-  }`,
+  baseURL: `${(hostname === "localhost" || hostname === "127.0.0.1") && isLocalApi
+    ? BASE_URL?.endpoint
+    : LIVE_URL?.endpoint
+    }`,
 });
 
 export const defaultHeaders = {
