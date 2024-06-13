@@ -1,7 +1,9 @@
 import { FaStar } from "react-icons/fa";
 import Border from "../Border";
+import { useState } from "react";
 
 const RightSideDetail = () => {
+    const [size, setSize] = useState('')
     return (
         <>
             <div className="grid gap-3">
@@ -37,10 +39,11 @@ const RightSideDetail = () => {
                             "8XL",
                             "9XL",
                         ]?.map((item, index) => {
+                            const isSelected = item === size;
                             return (
-                                <span
+                                <span onClick={() => setSize(item)}
                                     key={index}
-                                    className="flex cursor-pointer items-center justify-center gap-1 px-4 py-0.5 font-medium border text-gray-800 border-gray-500 rounded-2xl hover:bg-blue-200 hover:text-blue-500 hover:border-blue-500"
+                                    className={`flex cursor-pointer items-center justify-center gap-1 px-4 py-0.5 font-medium border text-gray-800 border-gray-500 rounded-2xl hover:bg-blue-200 hover:text-blue-500 hover:border-blue-500 ${isSelected ? "bg-blue-200 text-blue-500 border-blue-500" : ""}`}
                                 >
                                     {item}
                                 </span>

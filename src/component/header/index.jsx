@@ -53,10 +53,10 @@ const Header = () => {
             <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
               Home
             </a>
-            <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
+            <a onClick={() => navigate("/aboutus")} className="text-white cursor-pointer md:text-lg">
               About
             </a>
-            <a onClick={() => navigate("/")} className="text-white cursor-pointer md:text-lg">
+            <a onClick={() => navigate("/services")} className="text-white cursor-pointer md:text-lg">
               Services
             </a>
             <a
@@ -101,13 +101,13 @@ const Header = () => {
                     Home
                   </a>
                   <a
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate("/aboutus")}
                     className="block text-lg font-semibold text-black"
                   >
                     About
                   </a>
                   <a
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate("/services")}
                     className="block text-lg font-semibold text-black"
                   >
                     Services

@@ -1,6 +1,8 @@
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import router from "./routes";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   document.addEventListener('visibilitychange', function () {
@@ -19,7 +21,7 @@ function App() {
     console.log('lost focus');
   });
 
-  if (import.meta.env.VITE_APP_EVENT_STATUS) {
+  if (import.meta.env.VITE_APP_EVENT_STATUS || true) {
     document.onkeydown = (e) => {
       if (e.key == "F12") {
         e.preventDefault();

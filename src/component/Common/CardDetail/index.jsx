@@ -1,5 +1,7 @@
 import LeftSideDetail from "./LeftSideDetail";
 import RightSideDetail from "./RightSideDetail";
+import data from "../../../../data.json"
+import ProductCarousel from "../ProductCarousel";
 
 const CardDetail = () => {
 
@@ -13,6 +15,7 @@ const CardDetail = () => {
           <RightSideDetail />
         </div>
       </div>
+      <ProductCarousel products={data.products} />
     </div>
   );
 };
