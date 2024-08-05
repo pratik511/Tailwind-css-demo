@@ -5,6 +5,7 @@ import Contact from "../page/contact/index"
 import DefaultLayout from "./defaultLayout";
 import AboutUs from "../page/AboutUs";
 import Services from "../page/Services";
+import ViewAllProduct from "../page/viewAllProduct";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <CardDetail />,
+      },
+      {
+        path: "/viewallproduct",
+        element: <ViewAllProduct />,
       },
       {
         path: "/aboutus",

@@ -55,32 +55,5 @@
             "link": "https://indieweb.social/@kendalmintcode",
             "imageUrl": "https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png"
         }
-    ],
-    "products": [
-        {
-            "image": "https: //via.placeholder.com/300",
-            "title": "Product 1",
-            "price": "29.99"
-        },
-        {
-            "image": "https: //via.placeholder.com/300",
-            "title": "Product 2",
-            "price": "39.99"
-        },
-        {
-            "image": "https: //via.placeholder.com/300",
-            "title": "Product 3",
-            "price": "49.99"
-        },
-        {
-            "image": "https: //via.placeholder.com/300",
-            "title": "Product 4",
-            "price": "49.99"
-        },
-        {
-            "image": "https: //via.placeholder.com/300",
-            "title": "Product 5",
-            "price": "49.99"
-        }
     ]
 }

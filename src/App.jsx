@@ -21,7 +21,7 @@ function App() {
     console.log('lost focus');
   });
 
-  if (import.meta.env.VITE_APP_EVENT_STATUS || true) {
+  if (import.meta.env.VITE_APP_EVENT_STATUS && false) {
     document.onkeydown = (e) => {
       if (e.key == "F12") {
         e.preventDefault();
